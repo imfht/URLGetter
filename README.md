@@ -1,13 +1,9 @@
 # URLGetter
 dev ops engineer‘s url fetcher
 
-# Project Title
-
-One Paragraph of project description goes here
-
 ## Getting Started
 1. the main.py read urls from open(sys.argv[1])
-2. then fetch the urls use gevent and use BeautifulSoup grep all links in source html(a tag only)
+2. then fetch the urls use gevent, BeautifulSoup will grep all links in source html(a tag only)
 3. print each url
 
 ### Prerequisites
@@ -40,5 +36,6 @@ python main.py urls.txt
 ```
 
 # Todo
+
 -[ ] print unique url
 -[ ] show process bar
