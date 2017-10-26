@@ -1,3 +1,8 @@
+# encoding: utf-8
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from urlparse import urldefrag
 from urlparse import urljoin
 import sys
@@ -24,8 +29,9 @@ class Worker():
             return
         soup = BeautifulSoup(req.text, 'html.parser')
         for tag in soup.find_all('a', {'href': True}):
-            self.new_urls.add(urldefrag(urljoin(url, tag.get('href')))[0])
-        print url
+            url = urldefrag(urljoin(url, tag.get('href')))[0]
+            self.new_urls.add(url)
+            print url
 
     def run(self):
         p = Pool(size=100)
