@@ -30,7 +30,9 @@ class Worker():
         soup = BeautifulSoup(req.text, 'html.parser')
         for tag in soup.find_all('a', {'href': True}):
             url = urldefrag(urljoin(url, tag.get('href')))[0]
-            self.new_urls.add(url)
+            if not url.startswith('http'):
+                continue
+            #self.new_urls.add(url)
             print url
 
     def run(self):
