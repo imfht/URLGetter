@@ -37,5 +37,5 @@ python main.py urls.txt
 
 # Todo
 
--[ ] print unique url
--[ ] show process bar
+- [x] print unique url (use [python-bloomfilter](https://github.com/jaybaird/python-bloomfilter))
+- [ ] show process bar
